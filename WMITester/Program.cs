@@ -9,6 +9,8 @@ namespace WMITester
         {
             try
             {
+                //NOTE: This program need Administrator Rights
+
                 // I ended up using MSSerial_PortName from root\WMI, because Win32_SerialPort from root\CIMV2 won't detect my FTDI Serial Converter 
                 // (but it's showed up properly in Device manager) and it's also firing multiple events per device disconnecting/connecting
                 // more info here https://stackoverflow.com/questions/19840811/list-of-serialports-queried-using-wmi-differs-from-devicemanager
