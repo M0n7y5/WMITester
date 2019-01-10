@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Management;
+using System.Threading;
 
 namespace WMITester
 {
@@ -45,7 +46,10 @@ namespace WMITester
                 Console.WriteLine(ex);
             }
 
-            while (true) { }
+            //Thread.Sleep(-1);
+            Console.WriteLine("Press any key to exit application ...");
+            Console.ReadKey(true);
+            
         }
        
         private static void DeviceDetachWatcher_EventArrived(object sender, EventArrivedEventArgs e)
